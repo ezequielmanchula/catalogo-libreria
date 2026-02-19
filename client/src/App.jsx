@@ -17,8 +17,8 @@ function App() {
   const fetchArticles = async () => {
     try {
       const url = searchTerm
-        ? `http://localhost:3000/api/articles?search=${searchTerm}`
-        : `http://localhost:3000/api/articles`;
+        ? `/api/articles?search=${searchTerm}`
+        : `/api/articles`;
 
       const response = await fetch(url);
       const data = await response.json();
