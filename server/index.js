@@ -62,8 +62,10 @@ app.use(function (req, res) {
 module.exports = app;
 
 // Only listen if run directly
+// Only listen if run directly
 if (require.main === module) {
-    app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
+    const serverPort = process.env.PORT || 3000;
+    app.listen(serverPort, '0.0.0.0', () => {
+        console.log(`Server running on port ${serverPort}`);
     });
 }
