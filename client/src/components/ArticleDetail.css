@@ -1,0 +1,92 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #242424;
+    padding: 2.5rem;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    border: 1px solid #444;
+}
+
+@media (prefers-color-scheme: light) {
+    .modal-content {
+        background-color: #ffffff;
+        border: none;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        color: #213547;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-button:hover {
+    color: #fff;
+    background: none;
+}
+
+@media (prefers-color-scheme: light) {
+    .close-button:hover {
+        color: #000;
+    }
+}
+
+.detail-row {
+    margin-bottom: 1rem;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: #888;
+}
+
+.description {
+    line-height: 1.6;
+    margin-top: 0.5rem;
+}
+
+.price-large {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #646cff;
+}
+
+.buy-button {
+    width: 100%;
+    margin-top: 1.5rem;
+    background-color: #646cff;
+    color: white;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.buy-button:hover {
+    background-color: #535bf2;
+    border-color: #535bf2;
+}
