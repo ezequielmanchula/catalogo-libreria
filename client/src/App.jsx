@@ -16,9 +16,12 @@ function App() {
 
   const fetchArticles = async () => {
     try {
+      // Use environment variable if available (Render), otherwise relative path (Netlify/Local Proxy)
+      const apiUrl = import.meta.env.VITE_API_URL || '/api';
+
       const url = searchTerm
-        ? `/api/articles?search=${searchTerm}`
-        : `/api/articles`;
+        ? `${apiUrl}/articles?search=${searchTerm}`
+        : `${apiUrl}/articles`;
 
       const response = await fetch(url);
       const data = await response.json();
